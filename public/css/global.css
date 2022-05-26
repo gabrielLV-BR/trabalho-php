@@ -1,0 +1,74 @@
+:root {
+    --r: #fe3050;
+    --g: #20fe40;
+    --b: #1030fe;
+}
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration:  none;
+    position: relative;
+}
+
+a:hover {
+    color: white;
+}
+
+a:hover::before {
+    transform: scaleX(1);
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: -0.2rem;
+    display: block;
+    width: calc(100% + 2rem);
+    height: calc(100% + 0.4rem);
+    background: var(--b);
+    z-index: -1;
+
+    transition: transform 200ms ease;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.logo {
+    position: relative;
+}
+
+.logo::before {
+    user-select: all;
+    content: 'Teck';
+    font-size: 4em;
+    position: relative;
+}
+
+.logo::after {
+    position: absolute;
+    right: -3em;
+    bottom: 0.5em;
+    content: '';
+
+    display: block;
+    width: 3em;
+    height: 3em;
+
+    background-image: url("../assets/keyboard.svg");
+    background-size: cover;
+
+    transform: rotate(30deg);
+}

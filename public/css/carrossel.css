@@ -1,0 +1,65 @@
+.carrossel {
+    width: 100vw;
+    height: 80vh;
+
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carrossel > img {
+    filter: blur(2px);
+    display: block;
+    width: 100vw;
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    transition: left 800ms ease;
+
+    z-index: -1;
+}
+
+.carrossel > h1:not(.logo) {
+    background-color: #00000030;
+    border-radius: 5rem 1rem;
+    padding: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 5rem;
+    font-size: 5rem;
+    color: white;
+}
+
+.carrossel .caption {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: #00000030;
+}
+
+.carrossel .caption > p {
+    text-align: justify;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 2rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.carrossel > .logo {
+    position: absolute;
+    right: 3.5rem;
+    bottom: 1.5rem;
+    font-size: 0.4rem;
+    color: white;
+}
+
+.carrossel > .logo::after {
+    filter: invert(1);
+}

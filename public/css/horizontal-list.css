@@ -1,0 +1,50 @@
+.horizontal-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    margin-top: 3rem;
+    padding: 0 10vw;
+    width: 100vw;
+    min-width: 57rem;
+    height: 34rem;
+
+    background-image: linear-gradient(to top, var(--b) -10%, white 30%);
+}
+
+.horizontal-list div {
+    overflow: hidden;
+    padding: 1rem;
+    background-color: white;
+
+    margin: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 0.8rem;
+    box-shadow: 0px 0px 5px 2px #00000050;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.horizontal-list > div > img {
+    max-height: 7rem;
+    align-self: center;
+}
+
+.horizontal-list > div > h1 {
+    color: black;
+}
+
+.horizontal-list > div > p {
+    font-size: 1.5rem;
+}
+
+.horizontal-list > div * {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
