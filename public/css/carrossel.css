@@ -63,3 +63,17 @@
 .carrossel > .logo::after {
     filter: invert(1);
 }
+
+@media screen and (max-width: 950px) {
+    .carrossel {
+        flex-direction: column;
+        height: fit-content;
+    }
+    .carrossel .caption {
+        width: 100%;
+    }
+    .carrossel > h1:not(.logo) {
+        font-size: 4rem;
+        margin: 1rem;
+    }
+}

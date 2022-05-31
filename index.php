@@ -8,20 +8,18 @@
 
     <link rel="stylesheet" href="public/css/global.css">
     <link rel="stylesheet" href="public/css/index.css">
-    <link rel="stylesheet" href="public/css/horizontal-list.css">
     <link rel="stylesheet" href="public/css/carrossel.css">
+    <link rel="stylesheet" href="public/css/list.css">
+    <link rel="stylesheet" href="public/css/footer.css">
 
     <script src="js/carrossel.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1 class="logo"></h1>
-        <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre</a></li>  
-            <li><a href="#">Contato</a></li>
-        </ul>
-    </header>
+    <!-- Import Components -->
+    <?php include_once("templates/header.php"); ?>
+    <!--  -->
+    
+    <?php echo get_header(); ?>
     <section class="carrossel">
         <img src="public/images/keyboard.webp" alt="">
         <img src="public/images/keyboard2.jpg" alt="">
@@ -43,28 +41,41 @@
         Ut sit pariatur reprehenderit. Incidunt officiis fugit assumenda omnis dolore deleniti neque, ipsam sint a ea vitae iusto velit nisi distinctio culpa ut doloribus exercitationem provident illum facere ex? Fugit.</p>
     </main>
     
-    <section class="horizontal-list">
+    <section class="list">
         <div>
             <img src="public/images/keyboard.webp" alt="">
-            <h1>Bunda</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, expedita veniam non officia deserunt doloribus? Consequatur, ipsum libero quibusdam sint fuga voluptas ullam illo id provident magni molestiae, dolorum exercitationem.</p>
+            <span>
+                <h1>Bunda</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, expedita veniam non officia deserunt doloribus? Consequatur, ipsum libero quibusdam sint fuga voluptas ullam illo id provident magni molestiae, dolorum exercitationem.</p>
+            </span>
         </div>
         <div>
             <img src="public/images/keyboard.webp" alt="">
-            <h1>Bunda</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, expedita veniam non officia deserunt doloribus? Consequatur, ipsum libero quibusdam sint fuga voluptas ullam illo id provident magni molestiae, dolorum exercitationem.</p>
+            <span>
+                <h1>Bunda</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, expedita veniam non officia deserunt doloribus? Consequatur, ipsum libero quibusdam sint fuga voluptas ullam illo id provident magni molestiae, dolorum exercitationem.</p>
+            </span>
         </div>
         <div>
             <img src="public/images/keyboard.webp" alt="">
-            <h1>Bunda</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, expedita veniam non officia deserunt doloribus? Consequatur, ipsum libero quibusdam sint fuga voluptas ullam illo id provident magni molestiae, dolorum exercitationem.</p>
+            <span>
+                <h1>Bunda</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, expedita veniam non officia deserunt doloribus? Consequatur, ipsum libero quibusdam sint fuga voluptas ullam illo id provident magni molestiae, dolorum exercitationem.</p>
+            </span>
         </div>
         <div>
             <img src="public/images/keyboard.webp" alt="">
-            <h1>Bunda</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, expedita veniam non officia deserunt doloribus? Consequatur, ipsum libero quibusdam sint fuga voluptas ullam illo id provident magni molestiae, dolorum exercitationem.</p>
+            <span>
+                <h1>Bunda</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, expedita veniam non officia deserunt doloribus? Consequatur, ipsum libero quibusdam sint fuga voluptas ullam illo id provident magni molestiae, dolorum exercitationem.</p>
+            </span>
         </div>
     </section>
-    <footer></footer>
+    <footer class="footer">
+        <h1>
+            Desenvolvido em IFRS Farroupilha <wbr> - Curso Técnico em Informática
+        </h1>
+        <p>Por <a href="https://github.com/gabrielLV-BR">Gabriel</a> e <a href="https://github.com/the-felipe">Felipe</a></p>
+    </footer>
 </body>
 </html>

@@ -1,4 +1,4 @@
-.horizontal-list {
+.list {
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -8,13 +8,13 @@
     margin-top: 3rem;
     padding: 0 10vw;
     width: 100vw;
-    min-width: 57rem;
-    height: 34rem;
+    min-width: 27rem;
+    height: 100%;
 
-    background-image: linear-gradient(to top, var(--b) -10%, white 30%);
+    background-image: linear-gradient(to top, var(--b), white 30%);
 }
 
-.horizontal-list div {
+.list div {
     overflow: hidden;
     padding: 1rem;
     background-color: white;
@@ -22,7 +22,6 @@
     margin: 0;
 
     width: 100%;
-    height: 100%;
 
     border-radius: 0.8rem;
     box-shadow: 0px 0px 5px 2px #00000050;
@@ -32,19 +31,32 @@
     align-items: flex-start;
 }
 
-.horizontal-list > div > img {
+.list > div img {
     max-height: 7rem;
     align-self: center;
+    margin-bottom: 0.8rem;
 }
 
-.horizontal-list > div > h1 {
+.list > div h1 {
+    font-size: 3rem;
     color: black;
 }
 
-.horizontal-list > div > p {
+.list > div p {
     font-size: 1.5rem;
 }
 
-.horizontal-list > div * {
+.list > div * {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media screen and (max-width: 1100px) {
+    .list{
+        flex-direction: column;
+        height: 100%;
+    }
+    .list div {
+        height: 100%;
+    }
+    
 }
