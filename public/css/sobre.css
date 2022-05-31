@@ -1,3 +1,63 @@
-.sobre {
-  
+main {
+    width: 100vw;
+    padding: 0.2em 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h1 {
+    font-size: 3em;
+    margin: 1em 0;
+}
+
+main h2 {
+    font-size: 2em;
+}
+
+main p {
+    font-size: 1.5em;
+    margin-left: 1em;
+}
+
+main section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 2rem;
+}
+
+main section span {
+    width: 450px;
+}
+
+main section p {
+    width: fit-content;
+    margin: 0.8rem 0;
+}
+
+main section .localizacao {
+    text-align: right;
+}
+
+main section .endereco {
+    text-align: left;
+}
+
+.endereco p::before {
+    content: ' - ';
+    font-family: monospace;
+}
+
+@media screen and (max-width: 830px) {
+    main section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main section * {
+        text-align: center;
+    }
 }

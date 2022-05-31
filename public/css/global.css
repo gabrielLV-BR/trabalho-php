@@ -1,9 +1,9 @@
 :root {
     --r: #fe3050;
     --g: #20fe40;
-    --b: #1030fe;
+    --b: #552fc6;
 
-    --hover-fg-color: red;
+    --hover-fg-color: white;
     --hover-bg-color: var(--b);
 }
 
