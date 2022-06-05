@@ -1,15 +1,77 @@
-let cu = []
+let teclas = []
+let leds = []
+
+const custom_mapping = {
+  'control': 'ctrl',
+  'capslock': 'caps',
+  '\'': '"',
+  'backspace': 'return',
+  'insert': 'ins',
+  'pageup': 'pgup',
+  'pagedown': 'pgdn',
+  'delete': 'del',
+  'scrolllock': 'scrlk',
+  'numlock': 'num'
+}
 
 const keyboard = document.querySelector(".keyboard");
 const keys = keyboard.childNodes.forEach(key => {
-  if(key.nodeName != "DIV") return;
-  cu.push({
-    key: key,
-    code: key.textContent
-  })
+  if (key.nodeName != "DIV") return;
+
+  const text = key.textContent.toLowerCase();
+
+  if (key.classList.contains("led")) {
+
+    leds.push(key)
+  } else {
+    teclas.push({
+      key: key,
+      code: text
+    })
+  }
 })
 
-console.log(cu);
+console.log(teclas);
+
+window.addEventListener("keydown", e => {
+  let key = e.key.toLowerCase();
+
+  console.log(key);
+
+  if (key in custom_mapping) {
+    key = custom_mapping[key];
+  }
+
+  switch (key) {
+    case "scrlk": {
+      leds[0].classList.toggle("active")
+      break
+    }
+    case "num": {
+      leds[1].classList.toggle("active")
+      break
+    }
+    case "caps": {
+      leds[2].classList.toggle("active")
+      break
+    }
+  }
+  teclas
+    .filter(k => k.code == key)
+    .forEach(k => k.key.classList.add("active"));
+})
+
+window.addEventListener("keyup", e => {
+  let key = e.key.toLowerCase();
+
+  if (key in custom_mapping) {
+    key = custom_mapping[key];
+  }
+
+  teclas
+    .filter(k => k.code == key)
+    .forEach(k => k.key.classList.remove("active"));
+})
 
 // function _(key, w = 1, h = 1) {
 //   let element = document.createElement("div")

@@ -50,11 +50,11 @@
       <div class="key"><span>ScrLk</span></div>
       <div class="key"><span>Pause</span></div>
       <div class="key empty"><span></span></div>
-      <div class="key empty"><span></span></div>
-      <div class="key empty"><span></span></div>
-      <div class="key empty"><span></span></div>
+      <div class="led"></div>
+      <div class="led"></div>
+      <div class="led"></div>
       <!-- Segunda Linha -->
-      <div class="key"><span>'"</span></div>
+      <div class="key"><span>"</span></div>
       <div class="key"><span>1</span></div>
       <div class="key"><span>2</span></div>
       <div class="key"><span>3</span></div>
@@ -130,7 +130,7 @@
       <div class="key"><span>.</span></div>
       <div class="key"><span>;</span></div>
       <div class="key"><span>/</span></div>
-      <div class="key"><span>Sh</span></div>
+      <div class="key"><span>Shift</span></div>
       <div class="key empty"><span></span></div>
       <div class="key"><span>Up</span></div>
       <div class="key empty"><span></span></div>
@@ -142,7 +142,7 @@
       <div class="key"><span>Ctrl</span></div>
       <div class="key"><span>Win</span></div>
       <div class="key"><span>Alt</span></div>
-      <div class="key space-key center"><span></span></div>
+      <div class="key space-key center"><span> </span></div>
       <div class="key"><span>Alt</span></div>
       <div class="key"><span>Fn</span></div>
       <div class="key horizontal"><span>Ctrl</span></div>
