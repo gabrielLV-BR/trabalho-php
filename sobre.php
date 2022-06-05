@@ -8,7 +8,7 @@
   <title>Teck | Teclados por quem sabe o que faz</title>
 
   <link rel="stylesheet" href="public/css/global.css">
-  <link rel="stylesheet" href="public/css/index.css">
+  <link rel="stylesheet" href="public/css/header.css">
   <link rel="stylesheet" href="public/css/footer.css">
   <link rel="stylesheet" href="public/css/sobre.css">
 

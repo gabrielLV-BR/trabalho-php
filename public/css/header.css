@@ -1,0 +1,32 @@
+header {
+  font-size: 0.8rem;
+  width: 100vw;
+  padding: 2em 2em;
+}
+
+header, header > * {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header > h1 {
+  font-size: 1.4em;
+}
+
+header > h1 img {
+  transform: rotate(30deg);
+}
+
+header > ul {
+  font-size: 2.2em;
+  list-style: none;
+  margin: 0 3em;
+}
+
+header > ul > li:not(:last-of-type)::after {
+  content: '|';
+  color: #5e0b7f;
+  margin: 0 1.4em;
+}

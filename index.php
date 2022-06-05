@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="public/css/global.css">
     <link rel="stylesheet" href="public/css/index.css">
+    <link rel="stylesheet" href="public/css/header.css">
     <link rel="stylesheet" href="public/css/carrossel.css">
     <link rel="stylesheet" href="public/css/list.css">
     <link rel="stylesheet" href="public/css/footer.css">
@@ -71,6 +72,10 @@
             </span>
         </div>
     </section>
+    <div class="teste">
+        <h1>Ainda não sabe se quer um teclado bom?</h1>
+        <a href="teste.php">Experimente-o</a>
+    </div>
     <footer class="footer">
         <h1>
             Desenvolvido em IFRS Farroupilha <wbr> - Curso Técnico em Informática
