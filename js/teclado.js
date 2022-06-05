@@ -1,6 +1,14 @@
 let teclas = []
 let leds = []
 
+let audios = {}
+
+for (const audio of document.querySelectorAll("audio")) {
+  audio.volume = 0.9
+  audio.preservesPitch = false
+  audios[audio.id] = audio
+}
+
 const custom_mapping = {
   'control': 'ctrl',
   'capslock': 'caps',
@@ -21,9 +29,29 @@ const keys = keyboard.childNodes.forEach(key => {
   const text = key.textContent.toLowerCase();
 
   if (key.classList.contains("led")) {
-
     leds.push(key)
   } else {
+
+    key.addEventListener("mousedown", () => {
+      switch (text) {
+        case "scrlk": {
+          leds[0].classList.toggle("active")
+          break
+        }
+        case "num": {
+          leds[1].classList.toggle("active")
+          break
+        }
+        case "caps": {
+          leds[2].classList.toggle("active")
+          break
+        }
+      }
+
+      handlePlay(text, false)
+    })
+    key.addEventListener("mouseup", () => handlePlay(text, true))
+
     teclas.push({
       key: key,
       code: text
@@ -31,12 +59,8 @@ const keys = keyboard.childNodes.forEach(key => {
   }
 })
 
-console.log(teclas);
-
 window.addEventListener("keydown", e => {
   let key = e.key.toLowerCase();
-
-  console.log(key);
 
   if (key in custom_mapping) {
     key = custom_mapping[key];
@@ -59,6 +83,8 @@ window.addEventListener("keydown", e => {
   teclas
     .filter(k => k.code == key)
     .forEach(k => k.key.classList.add("active"));
+
+  handlePlay(key, false)
 })
 
 window.addEventListener("keyup", e => {
@@ -71,53 +97,29 @@ window.addEventListener("keyup", e => {
   teclas
     .filter(k => k.code == key)
     .forEach(k => k.key.classList.remove("active"));
+
+  handlePlay(key, true)
 })
 
-// function _(key, w = 1, h = 1) {
-//   let element = document.createElement("div")
-//   element.className = `key ${key == "" ? 'space' : key}`
-//   element.innerText = key
-//   return element
-// }
+function handlePlay(key, releasing = false) {
+  const playFunction = releasing ? playRelease : playClick
 
+  let type = ["enter", "return"].includes(key) ? "alt" : "normal";
 
-// // const keys = [
-// //   _("Esc"),
-// //   _(""),
-// //   _("F1"),
-// //   _("F2"),
-// //   _("F3"),
-// //   _("F4"),
-// //   _(""),
-// //   _("F5"),
-// //   _("F6"),
-// //   _("F7"),
-// //   _("F8"),
-// //   _(""),
-// //   _("F9"),
-// //   _("F10"),
-// //   _("F11"),
-// //   _("F12"),
-// //   _("PrtSc"),
-// //   _("ScrLk"),
-// //   _("Pause"),
-// //   _(""),
-// //   _(""),
-// //   _(""),
-// //   _(""),
-// // ]
+  if (key == " ") playFunction("space")
+  else playFunction(type)
+}
 
-// let cu = [
-//   "Ecs. .F1.F2.F3.F4. .F5.F6.F7.F8. .F9.F10.F11.F12.PrtSc.ScrLk.Pause. . . .",
-//   "Ecs. .F1.F2.F3.F4. .F5.F6.F7.F8. .F9.F10.F11.F12.PrtSc.ScrLk.Pause. . . .",
-//   "Ecs. .F1.F2.F3.F4. .F5.F6.F7.F8. .F9.F10.F11.F12.PrtSc.ScrLk.Pause. . . .",
-//   "Ecs. .F1.F2.F3.F4. .F5.F6.F7.F8. .F9.F10.F11.F12.PrtSc.ScrLk.Pause. . . .",
-//   "Ecs. .F1.F2.F3.F4. .F5.F6.F7.F8. .F9.F10.F11.F12.PrtSc.ScrLk.Pause. . . .",
-//   "Ctrl.W.Alt. . . . . . . . . . .F10.F11.F12.PrtSc.ScrLk.Pause. . . .",
-// ]
+function playClick(type = "normal") {
+  const sound = audios[type + "_click"]
+  sound.playbackRate = 0.98 + Math.random() * 0.2
+  sound.currentTime = 0
+  sound.play()
+}
 
-// document.querySelectorAll(".keyboard").forEach(k => {
-//   for(const j of cu) {
-//     k.append(...(j.split(".").map(i => _(i))));
-//   }
-// })
+function playRelease(type = "normal") {
+  const sound = audios[type + "_release"]
+  sound.playbackRate = 0.98 + Math.random() * 0.1
+  sound.currentTime = 0
+  sound.play()
+}
