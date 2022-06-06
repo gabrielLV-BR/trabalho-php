@@ -139,3 +139,9 @@ main {
 .key.empty {
   border: none;
 }
+
+@media screen and (max-width: 1600px) {
+  :root {
+    font-size: 12px;
+  }
+}

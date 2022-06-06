@@ -4,7 +4,7 @@ let leds = []
 let audios = {}
 
 for (const audio of document.querySelectorAll("audio")) {
-  audio.volume = 0.9
+  audio.volume = 0.5
   audio.preservesPitch = false
   audios[audio.id] = audio
 }
@@ -19,7 +19,11 @@ const custom_mapping = {
   'pagedown': 'pgdn',
   'delete': 'del',
   'scrolllock': 'scrlk',
-  'numlock': 'num'
+  'numlock': 'num',
+  'arrowup': 'up',
+  'arrowdown': 'down',
+  'arrowleft': 'left',
+  'arrowright': 'right',
 }
 
 const keyboard = document.querySelector(".keyboard");
