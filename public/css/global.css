@@ -1,10 +1,17 @@
 :root {
-    --r: #fe3050;
-    --g: #20fe40;
-    --b: #552fc6;
+    --font-color: black;
+    --background-color: white;
+    --primary-color: #552fc6;
+    --darker-primary-color: #412792;
 
-    --hover-fg-color: white;
-    --hover-bg-color: var(--b);
+    --hover-fg-color: var(--background-color);
+    --hover-bg-color: var(--primary-color);
+}
+
+::selection {
+
+    background-color:  var(--darker-primary-color);
+    color: var(--background-color);
 }
 
 * {
@@ -45,9 +52,13 @@ a::before {
     background: var(--hover-bg-color);
     z-index: -1;
 
-    /* transition: transform 200ms ease; */
+    transition: transform 200ms ease;
     transform-origin: left;
     transform: scaleX(0);
+}
+
+a.no-animation::before {
+    transition: none;
 }
 
 .logo {

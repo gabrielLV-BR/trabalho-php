@@ -73,8 +73,11 @@
         </div>
     </section>
     <div class="teste">
-        <h1>Ainda não sabe se quer um teclado bom?</h1>
-        <a href="teste.php">Experimente-o</a>
+        <h1>Ainda não sabe <br> se quer um <br> teclado bom?</h1>
+        <a class="no-animation" href="teste.php">
+            <span>Experimente</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M24 40 21.9 37.85 34.25 25.5H8V22.5H34.25L21.9 10.15L24 8L40 24Z"/></svg>
+        </a>
     </div>
     <footer class="footer">
         <h1>

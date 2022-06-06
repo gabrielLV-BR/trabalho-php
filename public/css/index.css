@@ -28,13 +28,55 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
 
+    width: 100vw;
     height: 40vh;
+
+    font-size: 1.4rem;
+
+    padding: 2rem;
+
+    color: var(--background-color);
+    background-color: var(--primary-color);
 }
 
 .teste * {
     flex: 1;
     width: 100%;
+} 
+
+.teste h1 {
+    text-align: right;
+}
+ 
+.teste a {
+    padding: 0 1rem;
+
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+
+    --hover-fg-color: var(--primary-color);
+    --hover-bg-color: var(--background-color);
+}
+
+.teste a:not(:hover) {
+    color: var(--background-color);
+}
+
+.teste a svg {
+    transition: transform 200ms ease;
+    fill: var(--background-color);
+    color: var(--primary-color);
+}
+
+.teste a:hover svg {
+    fill: var(--primary-color);
+    transform: translateX(20px);
 }
 
 @media screen and (max-width:950px) {

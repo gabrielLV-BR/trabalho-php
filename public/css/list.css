@@ -11,7 +11,7 @@
     min-width: 27rem;
     height: 100%;
 
-    background-image: linear-gradient(to top, var(--b), white 30%);
+    background-image: linear-gradient(to top, var(--primary-color), white 30%);
 }
 
 .list div {
