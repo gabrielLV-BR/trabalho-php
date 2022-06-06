@@ -51,6 +51,31 @@ main section .endereco {
     font-family: monospace;
 }
 
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+}
+
+.contato section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;    
+
+    height: 2rem;
+
+    font-size: 1.5rem;
+}
+
+.contato svg {
+    fill: var(--primary-color);
+    zoom: 0.6;
+}
+
 @media screen and (max-width: 830px) {
     main section {
         flex-direction: column;
