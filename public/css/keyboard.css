@@ -14,21 +14,21 @@ main {
   grid-template-columns: repeat(21, min-content);
   grid-template-rows: repeat(6, min-content);
 
-  margin: 2rem;
-  padding: 0.4rem;
-  border-radius: 0.4rem;
+  margin: 2em;
+  padding: 0.4em;
+  border-radius: 0.4em;
 
   width: fit-content;
-  height: 37.5rem;
+  height: 37.5em;
 
   background-image: linear-gradient(to top, black, transparent 20%);
 }
 
 .keyboard .key {
-  /* --size: calc(4.7rem);
+  /* --size: calc(4.7em);
   width: var(--size);
   height: var(--size); */
-  --width: 4.9rem;
+  --width: 4.9em;
   width: var(--width);
   height: auto;
   aspect-ratio: 1/1;
@@ -36,9 +36,9 @@ main {
 }
 
 .keyboard .led {
-  width: 2.4rem;
-  height: 0.8rem;
-  border-radius: 1rem;
+  width: 2.4em;
+  height: 0.8em;
+  border-radius: 1em;
   background-color: #606060;
   background-image: linear-gradient(to top, #00000050, transparent);
 
@@ -61,8 +61,8 @@ main {
   user-select: none;
   cursor: pointer;
 
-  border-radius: 0.8rem;
-  margin: 0.2rem;
+  border-radius: 0.8em;
+  margin: 0.2em;
 
   color: white;
 
@@ -72,7 +72,7 @@ main {
   0px 0px 5px 3px #00000050;
 
   display: flex;
-  padding: 0.7rem 0.8rem;
+  padding: 0.7em 0.8em;
 }
 
 .key.center {
@@ -81,7 +81,7 @@ main {
 
 .key span {
   font-family: 'Roboto', monospace, sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.4em;
   z-index: 1;
 }
 
@@ -89,10 +89,10 @@ main {
   content: '';
   position: absolute;
   display: block;
-  width: calc(100% - 0.4rem);
+  width: calc(100% - 0.4em);
   height: 80%;
 
-  border-radius: 0.8rem;
+  border-radius: 0.8em;
 
   background-image: linear-gradient(
     to right, 
@@ -100,8 +100,8 @@ main {
     #343434
   );
 
-  left: 0.2rem;
-  top: 0.2rem;
+  left: 0.2em;
+  top: 0.2em;
 }
 
 .key.vertical {
@@ -110,7 +110,7 @@ main {
 }
 
 .key.vertical::before {
-  height: calc(100% - 0.6rem);
+  height: calc(100% - 0.6em);
 }
 
 .key.horizontal {
@@ -132,7 +132,7 @@ main {
   width: 40%;
   height: 2px;
   background: #ffffff80;
-  margin-top: 0.8rem;
+  margin-top: 0.8em;
   z-index: 1;
 }
 
@@ -141,7 +141,19 @@ main {
 }
 
 @media screen and (max-width: 1600px) {
-  :root {
+  .keyboard {
     font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1340px) {
+  .keyboard {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .keyboard {
+    font-size: 6px;
   }
 }

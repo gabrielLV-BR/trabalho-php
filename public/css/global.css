@@ -9,7 +9,6 @@
 }
 
 ::selection {
-
     background-color:  var(--darker-primary-color);
     color: var(--background-color);
 }

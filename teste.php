@@ -29,14 +29,14 @@
 
   <?php echo get_header(); ?>
 
-  <audio id="normal_click" src="public/assets/normal_click.ogg"></audio>
-  <audio id="normal_release" src="public/assets/normal_release.ogg"></audio>
+  <audio id="normal_click"   src="public/assets/audio/normal_click.ogg"></audio>
+  <audio id="normal_release" src="public/assets/audio/normal_release.ogg"></audio>
   
-  <audio id="space_click" src="public/assets/space_click.ogg"></audio>
-  <audio id="space_release" src="public/assets/space_release.ogg"></audio>
+  <audio id="space_click"    src="public/assets/audio/space_click.ogg"></audio>
+  <audio id="space_release"  src="public/assets/audio/space_release.ogg"></audio>
   
-  <audio id="alt_click" src="public/assets/enter_click.ogg"></audio>
-  <audio id="alt_release" src="public/assets/enter_release.ogg"></audio>
+  <audio id="alt_click"      src="public/assets/audio/alt_click.ogg"></audio>
+  <audio id="alt_release"    src="public/assets/audio/alt_release.ogg"></audio>
   
   <main>
     <div class="keyboard">
