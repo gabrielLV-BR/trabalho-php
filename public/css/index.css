@@ -3,6 +3,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
+    background: var(--background-color);
+    color: var(--font-color);
 }
 
 main h1 {
@@ -37,7 +40,7 @@ main {
 
     padding: 2rem;
 
-    color: var(--background-color);
+    color: white;
     background-color: var(--primary-color);
 }
 
@@ -61,18 +64,19 @@ main {
     justify-content: space-between;
     text-align: left;
 
+    transition: color 100ms ease !important;
+
     --hover-fg-color: var(--primary-color);
     --hover-bg-color: var(--background-color);
 }
 
 .teste a:not(:hover) {
-    color: var(--background-color);
+    color: white;
 }
 
 .teste a svg {
-    transition: transform 200ms ease;
-    fill: var(--background-color);
-    color: var(--primary-color);
+    transition: transform 200ms ease, fill 100ms ease;
+    fill: white;
 }
 
 .teste a:hover svg {
@@ -81,9 +85,6 @@ main {
 }
 
 @media screen and (max-width:950px) {
-    header {
-        font-size: 0.5rem;
-    }
     .teste {
         flex-direction: column;
     }

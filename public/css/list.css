@@ -11,13 +11,13 @@
     min-width: 27rem;
     height: 100%;
 
-    background-image: linear-gradient(to top, var(--primary-color), white 30%);
+    background-image: linear-gradient(to top, var(--primary-color), var(--background-color) 30%);
 }
 
 .list div {
     overflow: hidden;
     padding: 1rem;
-    background-color: white;
+    background-color: var(--background-color);
 
     margin: 0;
 
@@ -29,6 +29,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.list div:hover {
+    box-shadow: 0px 5px 8px 2px #00000050;
+    transform: scale(1.02) translateY(-5px);
 }
 
 .list > div img {
@@ -39,7 +46,7 @@
 
 .list > div h1 {
     font-size: 3rem;
-    color: black;
+    color: var(--font-color);
 }
 
 .list > div p {

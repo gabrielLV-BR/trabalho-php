@@ -15,7 +15,7 @@
 
     <script src="js/carrossel.js" defer></script>
 </head>
-<body>
+<body class="dark">
     <!-- Import Components -->
     <?php include_once("templates/header.php"); ?>
     <?php include_once("templates/footer.php"); ?>

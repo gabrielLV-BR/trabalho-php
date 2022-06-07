@@ -29,8 +29,78 @@ header ul a {
   color: var(--primary-color);
 }
 
-header > ul > li:not(:last-of-type)::after {
+header .toggleTheme {
+  margin: 0.8rem;
+}
+
+header .toggleTheme {
+  margin: 1rem;
+  border: none;
+  background-color: transparent;
+
+  background-image: url("../assets/icons/moon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+  width: 3rem;
+  height: 3rem;
+}
+
+.dark header .toggleTheme {
+  background-image: url("../assets/icons/sun.svg");
+  filter: invert(1);
+}
+
+header > ul > li:not(:last-child)::after {
   content: '|';
   color: var(--primary-color);
   margin: 0 1.4em;
+}
+
+.logo {
+  position: relative;
+}
+
+.logo::before {
+  user-select: all;
+  content: 'Teck';
+  font-size: 4em;
+  position: relative;
+}
+
+.dark .logo::after {
+  filter: invert(1);
+}
+
+.logo::after {
+  position: absolute;
+  right: -3em;
+  bottom: 0.5em;
+  content: '';
+
+  display: block;
+  width: 3em;
+  height: 3em;
+
+  background-image: url("../assets/keyboard.svg");
+  background-size: cover;
+
+  transform: rotate(30deg);
+}
+
+@media screen and (max-width: 945px) {
+  header {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  header {
+    font-size: 0.8rem;
+    flex-direction: column;
+  }
+
+  header> ul {
+    margin: 0.6rem;
+  }
 }

@@ -8,6 +8,17 @@
     --hover-bg-color: var(--primary-color);
 }
 
+body.dark {
+    --font-color: rgb(255, 255, 255);
+    --background-color: rgb(35, 35, 35);
+    --primary-color: #e5416a;
+    --darker-primary-color: #f1124a;
+
+    --hover-fg-color: var(--background-color);
+    --hover-bg-color: var(--primary-color);
+}
+
+
 ::selection {
     background-color:  var(--darker-primary-color);
     color: var(--background-color);
@@ -19,6 +30,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    transition: color 100ms ease, background-color 200ms ease;
 }
 
 body {
@@ -64,29 +77,6 @@ a.no-animation::before {
     transition: none;
 }
 
-.logo {
-    position: relative;
-}
-
-.logo::before {
-    user-select: all;
-    content: 'Teck';
-    font-size: 4em;
-    position: relative;
-}
-
-.logo::after {
-    position: absolute;
-    right: -3em;
-    bottom: 0.5em;
-    content: '';
-
-    display: block;
-    width: 3em;
-    height: 3em;
-
-    background-image: url("../assets/keyboard.svg");
-    background-size: cover;
-
-    transform: rotate(30deg);
+button {
+    cursor: pointer;
 }
