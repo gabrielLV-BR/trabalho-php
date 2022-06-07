@@ -19,7 +19,7 @@ h1 {
 form {
     position: relative;
     padding: 1rem;
-    width: 60%;
+    width: 70%;
     gap: 0.6rem;
 
     margin: 5vh 1vw;
@@ -142,3 +142,21 @@ form input[type=submit]:active {
     transform: scale(1) translateY(0);
     filter: brightness(0.8);
 }
+
+@media screen and (max-width: 610px) {
+    form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    form section, form {
+        flex-direction: column;
+        gap: 0.2rem;
+        margin: 0;
+    }
+    form {
+        padding: 0.2rem;
+    }
+}
+

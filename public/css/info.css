@@ -19,6 +19,8 @@ main {
   min-width: 500px;
   padding: 2em;
 
+  margin: 5rem auto;
+
   flex-direction: column;
 
   color: white;

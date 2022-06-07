@@ -30,8 +30,8 @@ main section {
     align-items: flex-start;
     justify-content: center;
 
-    height: 60vh;
-
+    height: fit-content;
+    
     gap: 2rem;
 }
 
