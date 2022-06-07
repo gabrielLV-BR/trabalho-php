@@ -55,6 +55,7 @@
           </div>
         </div>
       </span>
+    <span class="divisor"></span>
       <span class="endereco">
         <h1>Endereço</h1>
         <p>Rua X, Número 69, Sala 420</p>

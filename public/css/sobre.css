@@ -6,6 +6,10 @@ main {
     align-items: center;
 }
 
+h1, p, h2, span {
+    color: var(--font-color);
+}
+
 main h1 {
     font-size: 3em;
     margin: 1em 0;
@@ -26,6 +30,8 @@ main section {
     align-items: flex-start;
     justify-content: center;
 
+    height: 60vh;
+
     gap: 2rem;
 }
 
@@ -44,6 +50,14 @@ main section .localizacao {
 
 main section .endereco {
     text-align: left;
+}
+
+main section .divisor {
+    display: block;
+    width: 2px;
+    height: 75%;
+    align-self: center;
+    background-color: var(--primary-color);
 }
 
 .endereco p::before {
@@ -116,9 +130,15 @@ main section .endereco {
     main section {
         flex-direction: column;
         align-items: center;
+        height: auto;
     }
 
     main section * {
         text-align: center;
+    }
+
+    main section .divisor {
+        height: 2px;
+        width: 90%;
     }
 }

@@ -66,6 +66,8 @@ header > ul > li:not(:last-child)::after {
   content: 'Teck';
   font-size: 4em;
   position: relative;
+
+  color: var(--font-color);
 }
 
 .dark .logo::after {
