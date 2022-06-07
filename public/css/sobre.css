@@ -52,6 +52,7 @@ main section .endereco {
 }
 
 .contato {
+    margin: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;

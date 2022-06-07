@@ -32,6 +32,10 @@ a {
     z-index: 1;
 }
 
+a:visited {
+    color: inherit;
+}
+
 a:hover {
     color: var(--hover-fg-color);
 }

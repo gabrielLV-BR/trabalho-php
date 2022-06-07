@@ -24,7 +24,7 @@
 
   <main>
     <div class="sobre">
-      <h1>Sobre a Tek&trade;</h1>
+      <h1>Sobre a Teck&trade;</h1>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, delectus accusantium est facilis voluptate adipisci quasi perferendis vero fuga libero veritatis voluptatibus necessitatibus quo aliquam odio corrupti magnam quis ratione?</p>
     </div>
     <section>
@@ -76,7 +76,21 @@
     </section>
   </section>
   <footer class="redes">
-    <a href=""></a><a href=""></a><a href=""></a><a href=""></a><a href=""></a>
+    <a href="">
+              
+    </a>
+    <a href="">
+
+    </a>
+    <a href="">
+
+    </a>
+    <a href="">
+
+    </a>
+    <a href="">
+
+    </a>
   </footer>
 </body>
 

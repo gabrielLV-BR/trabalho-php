@@ -1,0 +1,28 @@
+#formulario {
+    background-color: rgb(220, 220, 220);
+    display: flex;
+
+    width: 100vw;
+    height: 100vw;
+}
+
+form {
+    width: 70vw;
+    margin: 0 auto;
+
+    padding: 3vh;
+
+    background-color: #f0f0f0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blocoForm {
+    display: block;
+
+    background-color: #a366fa;
+    color: white;
+
+    width: 50vw;
+    height: 10vw;
+}
