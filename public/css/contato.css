@@ -1,28 +1,144 @@
-#formulario {
-    background-color: rgb(220, 220, 220);
+main, form, form > section {
     display: flex;
+    flex-direction: column;
+}
 
+main {
     width: 100vw;
-    height: 100vw;
+    /* height: 100vh; */
+
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    color: var(--font-color);
 }
 
 form {
-    width: 70vw;
-    margin: 0 auto;
+    position: relative;
+    padding: 1rem;
+    width: 60%;
+    gap: 0.6rem;
 
-    padding: 3vh;
+    margin: 5vh 1vw;
+    margin-top: 0;
 
-    background-color: #f0f0f0;
-    display: flex;
-    flex-wrap: wrap;
+    z-index: 2;
 }
 
-.blocoForm {
+form::before {
+
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
+
+    background-color: var(--primary-color);
+    filter: brightness(0.8) saturate(0.7) opacity(0.6);
+}
+
+form > section {
+    flex-direction: row;
+    justify-content: center;
+
+    gap: 0.4rem;
+}
+
+form label {
+    border-radius: 0.2rem;
+    background-color: #00000050;
+    padding: 1.2rem;
+
+    margin: 0;
+    
+    flex: 1;
+    width: 100%;
+
+    transition: transform 200ms ease, background-color 200ms ease;
+}
+
+form label:focus-within {
+    background-color: #00000080;
+    transform: scale(1.02) translateY(-5px);
+}
+
+input::placeholder {
+    color: #ffffffa0;
+}
+
+input:invalid,
+select:invalid {
+    color: #aa2020;
+    border-color: #aa2020;
+}
+
+form label span {
+    font-size: 1.9rem;
+    color: white;
+    
+    width: fit-content;
     display: block;
 
-    background-color: #a366fa;
-    color: white;
+    position: relative;
+}
 
-    width: 50vw;
-    height: 10vw;
+form label *:not(span) {
+    margin: 0.8rem;
+    font-size: 1.2rem;
+}
+
+input, textarea, select {
+    display: block;
+    width: 80%;
+
+    padding: 0.5rem;
+    border-radius: 0.1rem;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #ffffff50;
+    color: white;
+}
+
+option {
+    color: black;
+}
+
+textarea {
+    background-color: #00000050;
+    max-width: 100%;
+    max-height: 18rem;
+}
+
+hr {
+    width: 100%;
+    margin: 0.4rem 0;
+}
+
+form input[type=submit] {
+    cursor: pointer;
+
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 0.2rem;
+    align-self: center;
+
+    margin: 0.6rem;
+
+    font-size: 1.4rem;
+
+    transition: transform 200ms ease;
+}
+
+form input[type=submit]:active {
+    transform: scale(1) translateY(0);
+    filter: brightness(0.8);
 }

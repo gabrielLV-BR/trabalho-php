@@ -82,3 +82,7 @@ a.no-animation::before {
 button {
     cursor: pointer;
 }
+
+.cool-hover:hover {
+    transform: scale(1.02) translateY(-5px);
+}
