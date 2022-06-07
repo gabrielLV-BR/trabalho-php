@@ -1,0 +1,89 @@
+main, .card, .assunto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+main {
+  width: 100vw;
+  min-height: 80vh;
+}
+
+.card {
+  position: relative;
+
+  align-self: center;
+
+  width: 40%;
+  min-width: 500px;
+  padding: 2em;
+
+  flex-direction: column;
+
+  color: white;
+}
+
+.card hr {
+  flex: 1;
+  width: 100%;
+  border-color: var(--primary-color);
+
+  margin: 1.4em 0;
+}
+
+.card > h1 {
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: lowercase;
+  color: #00000050;
+  font-size: 1.8em;
+
+  margin-top: 1.5em;
+}
+
+.card h1:first-child {
+  margin-top: 0;
+}
+
+.card p {
+  font-size: 2.2em;
+  color: var(--font-color);
+}
+
+.assunto {
+  color: var(--font-color);
+}
+
+.assunto .mensagem {
+  margin: 0.8em 0;
+  width: 100%;
+  padding: 0.5em;
+  background-color: #00000050;
+  color: #ffffff90;
+  font-size: 1.5em;
+}
+
+span.tipo {
+  text-decoration: underline;
+}
+
+.card::before {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+
+  background-color: var(--primary-color);
+  filter: brightness(0.8) saturate(0.7) opacity(0.6);
+}
+
+@media screen and (max-width: 550px) {
+  .card {
+    font-size: 0.8rem;
+  }
+}

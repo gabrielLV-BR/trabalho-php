@@ -23,7 +23,7 @@
 
     <main>
         <h1>Formulário de Contato</h1>
-        <form action="">
+        <form action="info.php" method="POST">
             <section>
                 <label>
                     <span>Nome</span>
@@ -42,7 +42,7 @@
                 </label>
                 <label>
                     <span>Telefone</span>
-                    <input name="numero" type="" placeholder="(99) 9 9999-9999" maxlength="11" required>
+                    <input name="numero" type="tel" placeholder="(99) 9 9999-9999" pattern="(\()*[0-9]{2}(\))*( )*9( )*[0-9]{4}(-*)[0-9]{4}" required>
                 </label>
             </section>
             <section>
