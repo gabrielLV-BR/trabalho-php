@@ -75,8 +75,9 @@ input::placeholder {
 
 input:invalid,
 select:invalid {
-    color: #aa2020;
-    border-color: #aa2020;
+    color: #ffffff;
+    border: none;
+    border-bottom: 2px solid yellow;
 }
 
 form label span {
@@ -133,7 +134,7 @@ form input[type=submit] {
 
     margin: 0.6rem;
 
-    font-size: 1.4rem;
+    font-size: 2rem;
 
     transition: transform 200ms ease;
 }
