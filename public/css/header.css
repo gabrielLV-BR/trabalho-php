@@ -74,6 +74,14 @@ header > ul > li:not(:last-child)::after {
   filter: invert(1);
 }
 
+.force-white::before {
+  color: white;
+}
+
+.force-white::after {
+  filter: invert(1);
+}
+
 .logo::after {
   position: absolute;
   right: -3em;
@@ -84,7 +92,7 @@ header > ul > li:not(:last-child)::after {
   width: 3em;
   height: 3em;
 
-  background-image: url("../assets/keyboard.svg");
+  background-image: url("../assets/icons/keyboard.svg");
   background-size: cover;
 
   transform: rotate(30deg);
