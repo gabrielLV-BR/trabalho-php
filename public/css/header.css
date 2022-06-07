@@ -25,8 +25,12 @@ header > ul {
   margin: 0 3em;
 }
 
+header ul a {
+  color: var(--primary-color);
+}
+
 header > ul > li:not(:last-of-type)::after {
   content: '|';
-  color: #5e0b7f;
+  color: var(--primary-color);
   margin: 0 1.4em;
 }

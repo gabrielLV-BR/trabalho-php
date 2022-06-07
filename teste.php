@@ -8,6 +8,7 @@
   <title>Teck | Teclados por quem sabe o que faz</title>
 
   <link rel="stylesheet" href="public/css/global.css">
+  <link rel="stylesheet" href="public/css/footer.css">
   <link rel="stylesheet" href="public/css/header.css">
   <link rel="stylesheet" href="public/css/keyboard.css">
 
@@ -24,7 +25,10 @@
 
 <body>
   <!-- Import Components -->
-  <?php include_once("templates/header.php"); ?>
+  <?php 
+  include_once("templates/header.php"); 
+  include_once("templates/footer.php"); 
+  ?>
   <!--  -->
 
   <?php echo get_header(); ?>
@@ -162,6 +166,7 @@
       <div class="key"><span>.</span></div>
   </main>
 
+  <?php echo get_footer() ?>
 </body>
 
 </html>

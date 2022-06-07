@@ -1,7 +1,7 @@
 <?php 
 
   function get_header() {
-    echo "
+    return "
     <header>
           <h1 class='logo'></h1>
           <ul>

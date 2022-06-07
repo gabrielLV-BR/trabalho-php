@@ -52,12 +52,12 @@ main section .endereco {
 }
 
 .contato {
-    margin: 1.5rem;
+    margin: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.7rem;
+    gap: 1.5rem;
 }
 
 .contato section {
@@ -69,15 +69,50 @@ main section .endereco {
 
     height: 2rem;
 
-    font-size: 1.5rem;
+    font-size: 2.2rem;
 }
 
 .contato svg {
     fill: var(--primary-color);
-    zoom: 0.6;
+    zoom: 0.9;
 }
 
-@media screen and (max-width: 830px) {
+.redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.8rem;
+
+    margin: 5vh;
+}
+
+.redes a {
+    --hover-bg-color: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    border-radius: 50%;
+    background: var(--primary-color);
+
+    width: 4.5rem;
+    height: 4.5rem;
+
+    transition: transform 200ms ease;
+}
+
+.redes a:hover {
+    transform: scale(1.1) translateY(-8px);
+}
+
+.redes a img {
+    filter: invert(1);
+    width: 65%;
+}
+
+@media screen and (max-width: 950px) {
     main section {
         flex-direction: column;
         align-items: center;

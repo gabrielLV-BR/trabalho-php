@@ -17,7 +17,10 @@
 
 <body>
   <!-- Import Components -->
-  <?php include_once("templates/header.php"); ?>
+  <?php
+  include_once("templates/header.php");
+  include_once("templates/footer.php");
+  ?>
   <!--  -->
 
   <?php echo get_header(); ?>
@@ -76,22 +79,20 @@
     </section>
   </section>
   <footer class="redes">
-    <a href="">
-              
+    <a class="no-animation" href="#">
+      <img src="public/assets/icons/github.svg" alt="">
     </a>
-    <a href="">
-
+    <a class="no-animation" href="#">
+      <img src="public/assets/icons/youtube.svg" alt="">
     </a>
-    <a href="">
-
+    <a class="no-animation" href="#">
+      <img src="public/assets/icons/instagram.svg" alt="">
     </a>
-    <a href="">
-
-    </a>
-    <a href="">
-
+    <a class="no-animation" href="#">
+      <img src="public/assets/icons/linkedin.svg" alt="">
     </a>
   </footer>
+  <?php echo get_footer(); ?>
 </body>
 
 </html>

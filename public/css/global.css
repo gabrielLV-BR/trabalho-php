@@ -33,7 +33,7 @@ a {
 }
 
 a:visited {
-    color: inherit;
+    color: var(--primary-color);
 }
 
 a:hover {
