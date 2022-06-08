@@ -77,7 +77,14 @@ input:invalid,
 select:invalid {
     color: #ffffff;
     border: none;
-    border-bottom: 2px solid yellow;
+    border-bottom: 2px solid rgb(250, 250, 64);
+}
+
+input:valid,
+select:valid {
+    color: #ffffff;
+    border: none;
+    border-bottom: 2px solid rgb(17, 233, 17);
 }
 
 form label span {

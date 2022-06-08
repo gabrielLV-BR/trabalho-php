@@ -40,9 +40,12 @@
         </div>
     </section>
     <main>
-        <h1>Compre nossos produtos e etc.</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium quae delectus harum. Nihil reiciendis quibusdam vero, sequi doloremque omnis laboriosam amet modi! Error ad assumenda impedit in nihil velit sint.
-            Ut sit pariatur reprehenderit. Incidunt officiis fugit assumenda omnis dolore deleniti neque, ipsam sint a ea vitae iusto velit nisi distinctio culpa ut doloribus exercitationem provident illum facere ex? Fugit.</p>
+        <h1>Teclados profissionais e de qualidade</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ipsam molestiae. Assumenda asperiores, reprehenderit mollitia, quis ex distinctio nostrum placeat necessitatibus officia impedit magni tempora voluptas culpa illum provident non?
+            Et libero architecto, numquam eligendi tempora aliquam id rerum ipsam aperiam sequi dolore beatae neque, iste quos nisi adipisci? Cupiditate illum dolorem deserunt doloribus nihil. Veritatis non rerum voluptatem temporibus!
+        </p>
+        <!-- <h1>Compre nossos produtos e etc.</h1> -->
     </main>
 
     <section class="list">
